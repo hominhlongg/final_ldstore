@@ -5,6 +5,19 @@ html {
 * {
     box-sizing: border-box;
 }
+/* body {
+    min-height: 100vh;
+    background-image: url("{% static 'user/img/02.jpg' %}");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    
+  } */
   .sign-in {
     padding: 120px 75px 90px 75px;
     background:rgb(0,0,0,0.8);

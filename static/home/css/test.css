@@ -2062,6 +2062,54 @@ a.fix-btn-addr {
   padding: 5px;
   color: #fff;
 }
+.title-header-about{
+  text-transform: uppercase;
+  text-align: center;
+  margin:50px 0 20px 0;
+  font-size: 25px;
+  position: relative;
+}
+.title-header-about::after {
+  content: '';
+  height: 2px;
+  background: red;
+  width: 36%;
+  position: absolute;
+  left: 32%;
+  bottom: 0;
+}
+.about-content{
+  font-size: 17px;
+  text-align: justify;
+  line-height: 1.5;
+}
+.about-content p{
+  letter-spacing: 0.4px;
+}
+.about-slider{
+  position: relative;
+  height: 100vh;
+  margin-bottom: 40px;
+}
+.slider-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* display: none; */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.volunteer-img{
+  display: flex;
+}
+.volunteer-img-book{
+  width: 33%;
+  margin-right: 5px;
+  margin-top: 15px;
+}
 /* @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400);
 @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
