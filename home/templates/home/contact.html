@@ -1,53 +1,94 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-    {% include "base/head.html" %}
+  {% include "base/head.html" %}
 
-<body>
-
+  <body>
     {% include "base/header.html" %}
-
-    <div class="container">
-        <div class="main-body"style="height: auto;margin:20px 0px;">
-            <div class="title-header-about"><h1>all about ldstore</h1></div>
-            <div class="about-slider">
-                <img src="{% static 'home/img/daria-nepriakhina-xY55bL5mZAM-unsplash.jpg' %}" alt="" class="slider-img">
-                <img src="{% static 'home/img/olesia-buyar-ZD03qVhBJZg-unsplash.jpg' %}" alt="" class="slider-img">
-                <img src="{% static 'home/img/annelies-geneyn-bhBONc07WsI-unsplash.jpg' %}" alt="" class="slider-img">
-
-            </div>
-            <div class="about-content">
-                <p>Sứ mệnh của LDStore là xây dựng được một trang thương mại điện tử có thể phục vụ cho 
-                    khách hàng,những người đam mê đọc sách có thể lựa chọn và mua cho mình những loại sách
-                    phù hợp với sở thích của bản thân.Việc mua sách giờ đây đã vô cùng đơn giản và tiện lợi, 
-                    ngay tại nhà chỉ cần tạo tài khoản và đặt hàng sách sẽ được gói cẩn thận và giao đến cho bạn,
-                    LDstore đảm bảo việc giao nhận tới tận tay khách và các chương trình hậu đãi, hỗ trợ luôn tận tình và tận tâm nhất.
-                    <br><b>Lịch sử phát triển:</b><br>
-                LDStore được thành lập vào tháng 1 năm 2022,số lượng nhân sự ban đầu là 2 người.Xuất phát từ niềm đam mê yêu thích sách và kinh doanh, đồng thời với mong muốn có thể lan tỏa được niềm đam mê này đến với các thế hệ. <br>
-            <b>Một số thành tựu tiêu biểu:</b><br>
-        Dù mới chỉ thành lập nhưng LDStore đã nhanh chóng gặt hái được nhiều thành công chỉ trong vài tháng ra mắt, với sự tận tình và uy tín LDStore đã nhận được sự ủng hộ và tin tưởng của các vị khách hàng đầu tiên:<br>
-    - Tháng 3/2022, LDStore đạt được doanh thu 1.000.000.000 VND từ việc kinh doanh sách online.<br>
-    - Tháng 4/2022, nhận được danh hiệu hàng Việt Nam chất lượng cao do người tiêu dùng bình chọn.<br>
-    - Tháng 5/2022, doanh nghiệp TP.HCM tiêu biểu do Uỷ Ban Nhân Dân TPHCM trao tặng.<br></p>
-    <b>Xã hội:</b><br>
-    Ngoài việc kinh doanh và lan tỏa niềm đam mê sách đến các thế hệ, LDStore còn có các hoạt động tình nguyện, thiện nguyện phát sách cho trẻ em nghèo, vùng sâu/xa, khuyết tật. Với mong muốn tạo cơ hội cho các mầm non thiếu nhi có được
-    kiến thức, trở thành một doanh nghiệp có tầm và có tâm, có trách nhiệm giúp đỡ cho xã hội và đất nước, xây dựng nền văn minh vững mạnh và phát triển.Một số hình ảnh tình nguyện phát sách cho trẻ em nghèo:
-      </div>
-      <div class="volunteer-img">
-          <img src="{% static 'home/img/hoc-sinh11-12575082.jpg' %}" alt="" class="volunteer-img-book">
-          <img src="{% static 'home/img/ong-doan-ngoc-hai-xin-tap-sach-quan-ao-do-choi-cho-tre-em-ngheo-toi-nhat-quan-khong-nhan-tien-183380e7637365405251356024.jpg' %}" alt="" class="volunteer-img-book">
-          <img src="{% static 'home/img/s3b_rncg.jpg' %}" alt="" class="volunteer-img-book">
-      </div>
+    <div class="bg-second">
+      <div class="container body-wrap">
+        <div class="bg-main border-radius">
+          <div class="main-body" style="height: auto; margin: 20px 0px"></div>
+          <div class="title-header-about"><h1>all about ldstore</h1></div>
+          <div class="about-slider">
+            <img
+              src="{% static 'home/img/daria-nepriakhina-xY55bL5mZAM-unsplash.jpg' %}"
+              alt=""
+              class="slider-img"
+            />
+            <img
+              src="{% static 'home/img/olesia-buyar-ZD03qVhBJZg-unsplash.jpg' %}"
+              alt=""
+              class="slider-img"
+            />
+            <img
+              src="{% static 'home/img/annelies-geneyn-bhBONc07WsI-unsplash.jpg' %}"
+              alt=""
+              class="slider-img"
+            />
+          </div>
+          <div class="about-content box">
+            <p>
+              Sứ mệnh của LDStore là xây dựng được một trang thương mại điện tử
+              có thể phục vụ cho khách hàng,những người đam mê đọc sách có thể
+              lựa chọn và mua cho mình những loại sách phù hợp với sở thích của
+              bản thân.Việc mua sách giờ đây đã vô cùng đơn giản và tiện lợi,
+              ngay tại nhà chỉ cần tạo tài khoản và đặt hàng sách sẽ được gói
+              cẩn thận và giao đến cho bạn, LDstore đảm bảo việc giao nhận tới
+              tận tay khách và các chương trình hậu đãi, hỗ trợ luôn tận tình và
+              tận tâm nhất.
+              <br /><b>Lịch sử phát triển:</b><br />
+              LDStore được thành lập vào tháng 1 năm 2022,số lượng nhân sự ban
+              đầu là 2 người.Xuất phát từ niềm đam mê yêu thích sách và kinh
+              doanh, đồng thời với mong muốn có thể lan tỏa được niềm đam mê này
+              đến với các thế hệ. <br />
+              <b>Một số thành tựu tiêu biểu:</b><br />
+              Dù mới chỉ thành lập nhưng LDStore đã nhanh chóng gặt hái được
+              nhiều thành công chỉ trong vài tháng ra mắt, với sự tận tình và uy
+              tín LDStore đã nhận được sự ủng hộ và tin tưởng của các vị khách
+              hàng đầu tiên:<br />
+              - Tháng 3/2022, LDStore đạt được doanh thu 1.000.000.000 VND từ
+              việc kinh doanh sách online.<br />
+              - Tháng 4/2022, nhận được danh hiệu hàng Việt Nam chất lượng cao
+              do người tiêu dùng bình chọn.<br />
+              - Tháng 5/2022, doanh nghiệp TP.HCM tiêu biểu do Uỷ Ban Nhân Dân
+              TPHCM trao tặng.<br />
+            </p>
+            <b>Xã hội:</b><br />
+            Ngoài việc kinh doanh và lan tỏa niềm đam mê sách đến các thế hệ,
+            LDStore còn có các hoạt động tình nguyện, thiện nguyện phát sách cho
+            trẻ em nghèo, vùng sâu/xa, khuyết tật. Với mong muốn tạo cơ hội cho
+            các mầm non thiếu nhi có được kiến thức, trở thành một doanh nghiệp
+            có tầm và có tâm, có trách nhiệm giúp đỡ cho xã hội và đất nước, xây
+            dựng nền văn minh vững mạnh và phát triển.Một số hình ảnh tình
+            nguyện phát sách cho trẻ em nghèo:
+          </div>
+          <div class="volunteer-img box">
+            <img
+              src="{% static 'home/img/hoc-sinh11-12575082.jpg' %}"
+              alt=""
+              class="volunteer-img-book"
+            />
+            <img
+              src="{% static 'home/img/ong-doan-ngoc-hai-xin-tap-sach-quan-ao-do-choi-cho-tre-em-ngheo-toi-nhat-quan-khong-nhan-tien-183380e7637365405251356024.jpg' %}"
+              alt=""
+              class="volunteer-img-book"
+            />
+            <img
+              src="{% static 'home/img/s3b_rncg.jpg' %}"
+              alt=""
+              class="volunteer-img-book"
+            />
+          </div>
         </div>
-
+      </div>
     </div>
+
     <!-- footer -->
     {% include "base/footer.html" %}
     <!-- end footer -->
 
     <!-- app js -->
     {% include "home/js.html" %}
-
-</body>
-
+  </body>
 </html>

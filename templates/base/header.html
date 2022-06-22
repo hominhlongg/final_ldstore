@@ -14,12 +14,13 @@
                 <i class='bx bx-x'></i>
             </span>
             <!-- mid header -->
-            <div class="bg-main">
+            <div class="bg-black">
                 <div class="mid-header container">
-                    <a href="{% url 'home:index' %}" class="logo" style="display: flex;">
-                        <img src="{% static 'home/img/favicon3.png' %}" alt="">
-                        <div class="logo-brand-title"><h2>LDStore</h2></div>
-                    </a>
+                        <img src="{% static 'home/img/lg-vlu.png' %}" alt="" class="hd-img">
+                       
+                        <div class="wrap-hd-img">
+                            <a href="{% url 'home:index' %}" class="logo">LDStore</a>
+                        </div>
                     <div class="search">
                         <form style="display: flex;width: 100%;" method="post" action="{% url 'product:productsearch' %}">
                             {% csrf_token %}
@@ -34,24 +35,22 @@
                             <i class="bx bx-cart"></i>
                         </a></li>
                         {% if request.user.is_authenticated %}
-                            <li><a href="{% url 'signout' %}"><i class="bx bx-log-out"></i></a></li>
-                            <li><a href="{% url 'profile' %}"><i class="bx bx-cog"></i></a></li>
+                            <li><a href="{% url 'user:signout' %}"><i class="bx bx-log-out"></i></a></li>
+                            <li><a href="{% url 'user:profile' %}"><i class="bx bx-cog"></i></a></li>
                             <p>Hi {{ request.user.username }}</p>
                         {% else %}
                             <li><a href="{% url 'signin' %}"><i class='bx bx-user-circle'></i></a></li>
                         {% endif %}
                     </ul>
                 </div>
-            </div>
             <!-- end mid header -->
             <!-- bottom header -->
-            <div class="bg-second">
                 <div class="bottom-header container">
                     <ul class="main-menu">
                         <li><a href="{% url 'home:index' %}">Trang chủ</a></li>
                         <!-- mega menu -->
                         <li class="mega-dropdown">
-                            <a href="./products.html">Thể loại<i class='bx bxs-chevron-down'></i></a>
+                            <a href="#">Thể loại<i class='bx bxs-chevron-down'></i></a>
                             <div class="mega-content">
                                 <div class="row">
                                     <div class="col-3 col-md-12">
@@ -70,8 +69,9 @@
 
                     </ul>
                 </div>
-            </div>
             <!-- end bottom header -->
+            </div>
+
         </div>
         <!-- end main header -->
     </header>

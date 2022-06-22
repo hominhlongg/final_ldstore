@@ -5,12 +5,11 @@
             <div class="col-3 col-md-6">
                 <h3 class="footer-head">Sản phẩm</h3>
                 <ul class="menu">
-                    <li><a href="#"><i class="fa-solid fa-book"></i>Tiểu thuyết</a></li>
-                    <li><a href="#"><i class="fa-solid fa-book"></i>Tâm lý</a></li>
-                    <li><a href="#"><i class="fa-solid fa-book"></i>Kinh dị</a></li>
-                    <li><a href="#"><i class="fa-solid fa-book"></i>Truyện tranh</a></li>
-                    <li><a href="#"><i class="fa-solid fa-book"></i>Tình cảm</a></li>
+                    {% for category in categories %}
+                <li><a href="{% url 'product:productfilter' category=category.title %}"><i class="fa-solid fa-book"></i>{{ category.title }}</a></li>
+                {% endfor %}
                 </ul>
+                
             </div>
             <div class="col-3 col-md-6">
                 <h3 class="footer-head">Dịch vụ</h3>
@@ -32,7 +31,7 @@
             </div>
             <div class="col-3 col-md-6 col-sm-12">
                 <div class="contact" style="transform: translateY(-3rem);">
-                    <img src="{% static 'home/img/logoVLU.png' %}/" alt="">
+                    <img src="{% static 'home/img/lg-vlu.png' %}/" alt="" class="footer-lg-img">
                     <h3 class="contact-header">
                         LDStore
                     </h3>

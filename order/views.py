@@ -3,7 +3,7 @@ from django.http import JsonResponse, HttpResponse
 from django.shortcuts import redirect, render
 from django.views.generic import View
 from product.models import Product
-
+from decimal import *
 from .models import Cart, Order, OrderDetail
 
 
@@ -32,11 +32,14 @@ class PaymentView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         carts = Cart.objects.filter(
             user=request.user)
+        ship_price= Decimal(21.000)
         cart_price_total = sum([i.get_total_price for i in carts])
-        
+        total_include_ship = ship_price + cart_price_total
         context = {
             "carts": carts,
+            "ship_price": ship_price,
             "cart_price_total": cart_price_total,
+            "total_include_ship": total_include_ship,
         }
             
         return render(request, self.template_name, context)
@@ -46,7 +49,6 @@ class CheckOutView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         carts = Cart.objects.filter(
             user=request.user)
-
         total_price = 0
         order = Order.objects.create(
             user=request.user

@@ -3,6 +3,7 @@ from django.utils.functional import cached_property
 
 from user.models import CustomUser
 from product.models import Product
+import datetime
 
 
 # Create your models here.
@@ -35,10 +36,12 @@ class Order(models.Model):
         ('FA', 'Thất bại'),
     )
 
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    user = models.ForeignKey(CustomUser,related_name='user',on_delete=models.CASCADE)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default="OD")
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField()
     total_order = models.IntegerField(default=0)
+    def  __str__(self):
+        return f"{self.user.fullname}  {self.user.phone_number}  {self.created_at}"
 
 
 class OrderDetail(models.Model):

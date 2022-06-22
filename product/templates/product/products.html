@@ -13,22 +13,19 @@
     <!-- end header -->
 
     <!-- products content -->
-    <div class="bg-main">
-        <div class="container">
-            <div class="box">
+    <div class="bg-second">
+        <div class="container body-wrap">
                 <div class="breadcumb">
                     <a href="{% url 'home:index' %}">Trang chủ</a>
                     <span><i class='bx bxs-chevrons-right'></i></span>
                     <a href="{% url 'product:product' %}">Xem tất cả</a>
                 </div>
-            </div>
-            <div class="box">
                 <div class="row">
                     <div class="col-3 filter-col" id="filter-col">
-                        <div class="box filter-toggle-box">
+                        <div class=" filter-toggle-box">
                             <button class="btn-flat btn-hover" id="filter-close">close</button>
                         </div>
-                        <div class="box">
+                        <div class="">
                             <span class="filter-header">
                                 Thể loại
                             </span>
@@ -50,7 +47,7 @@
                                     <div class="product-card">
                                         <div class="product-card-img">
                                             <a href="{% url 'product:productdetail' slug=product.slug %}">
-                                                <img style="height: 200px; width: 150px;" src="{{ product.image.url }}" alt="">                 
+                                                <img style="height: 200px; " src="{{ product.image.url }}" alt="">                 
                                             </a>                                
                                          </div>                
                                             <div class="product-card-info">
@@ -65,8 +62,8 @@
                                                     {{ product.name }}
                                                 </div>
                                                 <div class="product-card-price">
-                                                    <span><del>{{ product.price|floatformat }}</del></span>
-                                                    <span class="curr-price">{{ product.price|floatformat }}</span>
+                                                    <span><del>{{ product.price}} VND</del></span>
+                                                    <span class="curr-price">{{ product.discount_price}} VND</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -87,7 +84,6 @@
                             </ul>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>
