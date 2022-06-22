@@ -39,7 +39,7 @@
                             <li><a href="{% url 'user:profile' %}"><i class="bx bx-cog"></i></a></li>
                             <p>Hi {{ request.user.username }}</p>
                         {% else %}
-                            <li><a href="{% url 'signin' %}"><i class='bx bx-user-circle'></i></a></li>
+                            <li><a href="{% url 'user:signin' %}"><i class='bx bx-user-circle'></i></a></li>
                         {% endif %}
                     </ul>
                 </div>
