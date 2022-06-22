@@ -27,7 +27,7 @@
             <img src="{% static 'user/img/logo.png' %}" alt="logo" style="width: 75px; height: 75px;">
             <h1>Đăng ký</h1>
         </div>
-        <form id="signup" method="post" action="{% url 'signup' %}">
+        <form id="signup" method="post" action="{% url 'user:signup' %}">
             {% csrf_token %}
             <div class="form-box">
                 <label class="signin-label">Tên đăng nhập</label>
