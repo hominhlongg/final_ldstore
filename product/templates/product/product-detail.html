@@ -65,11 +65,11 @@
                   </div>
                 </div>
                 <div>
-                  <a href="#"
-                    ><button class="btn-flat btn-hover" id="add-cart-button">
+                  <a href="">
+                    <button class="btn-flat btn-hover" id="add-cart-button"data-id="{{product.id}}">
                       Thêm giỏ hàng
-                    </button></a
-                  >
+                    </button>
+                    </a>
                 </div>
               </div>
             </div>
@@ -304,29 +304,29 @@
     <script src="{% static 'home/js/app.js' %}"></script>
     <script src="{% static 'product/js/product-detail.js' %}"></script>
     <script>
-      // $(document).on('click','#add-cart-button', function(e){
-      //     e.preventDefault();
-      //     const product_id = {{product.id}};
-      //     const quantity =$('#product_quantity').val() || 1;
-      //     $.ajax({
-      //         type:'POST',
-      //         url: '{% url "order:add-to-cart" %}',
-      //         data: {
-      //             id: product_id,
-      //             quantity: quantity,
-      //             csrfmiddlewaretoken: "{{csrf_token}}",
-      //             action: "post",
-      //         },
-      //         success: function(json){
-      //             console.log(json)
-      //             // document.getElementById("cart-count").innerHTML = json.no_items
-      //         //    $("#AddModal").modal();
-      //         },
-      //         error: function(xhr,errmsg,err){
-      //             console.log(xhr);
-      //         }
-      //     });
-      // })
+      $(document).on('click','#add-cart-button', function(e){
+          e.preventDefault();
+          const product_id = $(this).data("id");
+          const quantity =$('#product_quantity').val() || 1;
+          $.ajax({
+              type:'POST',
+              url: '{% url "order:add-to-cart" %}',
+              data: {
+                  id: product_id,
+                  quantity: quantity,
+                  csrfmiddlewaretoken: "{{csrf_token}}",
+                  action: "post",
+              },
+              success: function(json){
+                  console.log(json)
+                  // document.getElementById("cart-count").innerHTML = json.no_items
+              //    $("#AddModal").modal();
+              },
+              error: function(xhr,errmsg,err){
+                  console.log(xhr);
+              }
+          });
+      })
       // start incre decre quantity
       const minus = document.getElementById("decrement"),
         plus = document.getElementById("increment"),
